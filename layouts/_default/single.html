@@ -2,7 +2,9 @@
 	<span>
 		<h1>{{ .Title }}</h1>
 
-		{{ partial "post-meta" . }}
+		{{ if .Site.Params.show_post_meta }}
+			{{partial "post-meta" . }}
+		{{ end }}
 	</span>
 
 	<p>
